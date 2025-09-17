@@ -33,4 +33,16 @@ calcularValorTotal = function () {
             Subtotal esperado: 54
         Si el caso de prueba es exitoso, hacer un commit
      */
+    //6. Invocar a calcularValorDescuento y lo que devuelve guardar en la variable valorDescuento
+    valorDescuento = calcularValorDescuento(precioProducto, porcentajeDescuento);
+    //7. Mostrar el resultado en el componente lblDescuento
+    mostrarTexto('lblDescuento', valorDescuento);
+    /*
+        Caso de prueba: 
+            - cantidad: 10 
+            - precioProducto: 5.4  
+            - descuento: 10
+            - Descuento esperado: 5.4
+        Si el caso de prueba es exitoso, hacer un commit
+     */
 }
