@@ -9,7 +9,8 @@ saludar=function(){
     let float = recuperarFloat('txtEstatura')
     //Mostrar Texto
     let texto = mostrarTexto('lblResultado', nombre + ' ' + apellido)
-
+    //MOstrar imagen
+    let imagen = mostrarImagen('imgSaludo', './imagenes/gato.gif');
 }
 
 recuperarTexto=function(idComponente){
@@ -31,4 +32,8 @@ mostrarTexto=function(idComponente, msg){
     let cmpTexto = document.getElementById(idComponente);
     let texto = cmpTexto.innerText = msg;
     return texto;
+}
+mostrarImagen=function(idComponente, rutaImagen){
+    let componente = document.getElementById(idComponente);
+    let imagen = componente.src = rutaImagen;
 }
