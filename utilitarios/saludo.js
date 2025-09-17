@@ -11,6 +11,8 @@ saludar=function(){
     let texto = mostrarTexto('lblResultado', nombre + ' ' + apellido)
     //MOstrar imagen
     let imagen = mostrarImagen('imgSaludo', './imagenes/gato.gif');
+    //Mostrar texto en caja
+    let textoCaja = mostrarTextoEnCaja('txtNombre', '')
 }
 
 recuperarTexto=function(idComponente){
@@ -36,4 +38,9 @@ mostrarTexto=function(idComponente, msg){
 mostrarImagen=function(idComponente, rutaImagen){
     let componente = document.getElementById(idComponente);
     let imagen = componente.src = rutaImagen;
+}
+mostrarTextoEnCaja=function(idComponente, msg){
+    let cmpTexto = document.getElementById(idComponente);
+    let texto = cmpTexto.value = msg;
+    return texto;
 }
