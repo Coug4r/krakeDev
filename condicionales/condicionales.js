@@ -98,3 +98,27 @@ esMinuscula=function(caracter){
     }
     return valides;
 }
+esDIgito=function(caracter){
+    let asciiCode = caracter.charCodeAt(0);
+    let valides;
+    if (asciiCode>=48 && asciiCode<=57){
+        valides = true;
+    }
+    else{
+        valides = false;
+    }
+    return valides;
+}
+darPermiso=function(notaMatematica, notaFisica, notaGeometria){
+    notaMatematica = parseFloat(notaMatematica);
+    notaFisica = parseFloat(notaFisica);
+    notaGeometria = parseFloat(notaGeometria);
+    let permiso;
+    if (notaFisica > 90 || notaGeometria > 90 || notaMatematica > 90){
+        permiso = true;
+    }
+    else{
+        permiso = false;
+    }
+    return permiso;
+}
