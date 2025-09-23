@@ -34,3 +34,33 @@ calcularCapacidadPago = function(edad, ingresos, egresos){
     }
     return valorCuota;
 }
+calcularDescuento = function(precio, cantidad){
+    precio = parseFloat(precio);
+    cantidad = parseInt(cantidad);
+    let valorDescuento;
+    if (cantidad < 3){
+        valorDescuento = 0;
+    }
+    else if(cantidad >=3 && cantidad <=5){
+        valorDescuento = 2;
+    }
+    else if(cantidad>=6 && cantidad<=11){
+        valorDescuento = 3;
+    }
+    else if(cantidad >=12){
+        valorDescuento = 4;
+    }   
+    valorDescuento = precio - ((precio * valorDescuento)/100);
+    return valorDescuento;
+}
+determinarColesterolILDL = function(nivelColesterol){
+    nivelColesterol = parseFloat(nivelColesrterol);
+    let nivel;
+    if(nivelColesterol > 100){
+        nivel = 'Nivel de Colesterol LDL ALTO';
+    }
+    else{
+        nivel = 'Nivel de Colesterol LDL NORMAL'
+    }
+    return nivel;
+}
