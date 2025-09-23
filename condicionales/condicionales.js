@@ -64,3 +64,37 @@ determinarColesterolILDL = function(nivelColesterol){
     }
     return nivel;
 }
+validarClave=function(clave){
+    let valides;
+    let numCarac = clave.lenght;
+    if (numCarac >=8 && numCarac<=16){
+        valides = true;
+    }
+    else{
+        valides = false;
+    }
+    return valides;
+}
+esMayuscula=function(caracter){
+    let asciiCode = caracter.charCodeAt(0);
+    let valides;
+    if (asciiCode>=65 && asciiCode<=90){
+        valides = true;
+    }
+    else{
+        valides = false;
+    }
+    return valides;
+}
+
+esMinuscula=function(caracter){
+    let asciiCode = caracter.charCodeAt(0);
+    let valides;
+    if (asciiCode>=97 && asciiCode<=122){
+        valides = true;
+    }
+    else{
+        valides = false;
+    }
+    return valides;
+}
