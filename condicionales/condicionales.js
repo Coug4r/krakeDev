@@ -122,3 +122,29 @@ darPermiso=function(notaMatematica, notaFisica, notaGeometria){
     }
     return permiso;
 }
+otorgarPermiso=function(notaMatematica, notaFisica, notaGeometria){
+    notaMatematica = parseFloat(notaMatematica);
+    notaFisica = parseFloat(notaFisica);
+    notaGeometria = parseFloat(notaGeometria);
+    let permiso;
+    if (notaFisica > 90 || notaMatematica > 90 && notaGeometria > 80){
+        permiso = true;
+    }
+    else{
+        permiso = false;
+    }  
+    return permiso;
+}
+dejarSalir=function(notaMatematica, notaFisica, notaGeometria){
+    notaMatematica = parseFloat(notaMatematica);
+    notaFisica = parseFloat(notaFisica);
+    notaGeometria = parseFloat(notaGeometria);
+    let permiso;
+    if (notaFisica > 90 || notaGeometria > 90 || notaMatematica > 90 && notaFisica>notaMatematica){
+        permiso = true;
+    }
+    else{
+        permiso=false;
+    }
+    return permiso;
+}
