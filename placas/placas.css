@@ -64,6 +64,6 @@ body{
     display: flex;
     justify-content: flex-start;
     color:black;
-    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
