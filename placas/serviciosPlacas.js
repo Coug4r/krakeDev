@@ -59,6 +59,8 @@ limpiar=function(){
     mostrarTexto("lblError6", "");
     mostrarTexto("lblError7", "");
     mostrarTexto("lblError8", "");
+    mostrarTexto("lblProbincia", "");
+    mostrarTexto("lblTipo", "");
 }
 const provincias = {
   A: "Azuay",
@@ -89,4 +91,24 @@ const provincias = {
 obtenerProvincia=function(placa){
     let primerCaracter = placa.charAt(0);
     return provincias[primerCaracter] || null;
+}
+
+const tipos = {
+    A: "Vehiculo Comercial",
+    Z: "Vehiculo Comercial",
+    E: "Vehiculo gubernamentales",
+    X: "Vehiculo de uso oficial",
+    S: "Vehiculo de gobierno provincial",
+    M: "Vehiculo municipal",
+}
+opbtenerTipoVehiculo=function(placa){
+    let segundoCaracter = placa.charAt(1);
+    let asciiCode = segundoCaracter.charCodeAt(0);
+    let validez;
+    if (asciiCode>=65 && asciiCode<=90){
+        return tipos[segundoCaracter] || "Vehiculo particular";
+    }else{
+        return null;
+    }
+    
 }
