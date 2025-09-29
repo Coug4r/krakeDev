@@ -67,3 +67,15 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+.datos{
+    
+    width: fit-content;   /* El ancho se ajusta al texto */
+    margin: 10px auto;
+}
+.provincia{
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(0, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

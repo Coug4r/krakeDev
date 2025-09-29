@@ -60,3 +60,33 @@ limpiar=function(){
     mostrarTexto("lblError7", "");
     mostrarTexto("lblError8", "");
 }
+const provincias = {
+  A: "Azuay",
+  B: "Bolívar",
+  U: "Cañar",
+  C: "Carchi",
+  X: "Cotopaxi",
+  H: "Chimborazo",
+  O: "El Oro",
+  E: "Esmeraldas",
+  W: "Galápagos",
+  G: "Guayas",
+  I: "Imbabura",
+  L: "Loja",
+  R: "Los Ríos",
+  M: "Manabí",
+  V: "Morona Santiago",
+  N: "Napo",
+  S: "Pastaza",
+  P: "Pichincha",
+  K: "Sucumbíos",
+  Q: "Orellana",
+  T: "Tungurahua",
+  Z: "Zamora Chinchipe",
+  Y: "Santa Elena"
+};
+
+obtenerProvincia=function(placa){
+    let primerCaracter = placa.charAt(0);
+    return provincias[primerCaracter] || null;
+}
