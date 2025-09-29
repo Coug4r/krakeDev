@@ -12,7 +12,7 @@ validarEstructura=function(placa){
     let validez = true;
 
     if (longitud < 7 || longitud > 8){
-        mostrarTexto('lblError1', "La placa debe tener de 7 a 8 caracteres")
+        mostrarTexto('lblError0', "La placa debe tener de 7 a 8 caracteres")
         validez = false;
     }
     if (esMayuscula(primerCaracter) == false){
@@ -20,28 +20,43 @@ validarEstructura=function(placa){
         validez = false;
     }
     if (esMayuscula(segundoCaracter) == false){
-        mostrarTexto('lblError1', "El segundo caracter tiene que ser MAYUSCULA")
+        mostrarTexto('lblError2', "El segundo caracter tiene que ser MAYUSCULA")
         validez = false;
     }    
     if (esMayuscula(tercerCaracter) == false){
-        mostrarTexto('lblError1', "El tercer caracter tiene que ser MAYUSCULA")
+        mostrarTexto('lblError3', "El tercer caracter tiene que ser MAYUSCULA")
         validez = false;
     }
     if (esGuion(guion) == false){
-        mostrarTexto('lblError1', "El cuarto caracter tiene que ser un GUION")
+        mostrarTexto('lblError4', "El cuarto caracter tiene que ser un GUION")
         validez = false;
     }
     if (esDigito(digito1) == false){
-        mostrarTexto('lblError1', "El quinto caracter tiene que ser un DIGITO")
+        mostrarTexto('lblError5', "El quinto caracter tiene que ser un DIGITO")
         validez = false;
     }  
     if (esDigito(digito2) == false){
-        mostrarTexto('lblError1', "El sexto caracter tiene que ser un DIGITO")
+        mostrarTexto('lblError6', "El sexto caracter tiene que ser un DIGITO")
         validez = false;
     }       
     if (esDigito(digito3) == false){
-        mostrarTexto('lblError1', "El septimo caracter tiene que ser un DIGITO")
+        mostrarTexto('lblError7', "El septimo caracter tiene que ser un DIGITO")
         validez = false;
-    }     
+    }  
+    if (longitud == 8 && esDigito(digito4) == false){
+        mostrarTexto('lblError8', "El octavo caracter tiene que ser un DIGITO")
+        validez = false;
+    }         
     return !validez;
+}
+limpiar=function(){
+    mostrarTexto("lblError0", "");
+    mostrarTexto("lblError1", "");
+    mostrarTexto("lblError2", "");
+    mostrarTexto("lblError3", "");
+    mostrarTexto("lblError4", "");
+    mostrarTexto("lblError5", "");
+    mostrarTexto("lblError6", "");
+    mostrarTexto("lblError7", "");
+    mostrarTexto("lblError8", "");
 }

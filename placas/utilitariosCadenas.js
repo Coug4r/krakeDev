@@ -29,4 +29,5 @@ esGuion=function(caracter){
     else{
         valides = false;
     }
+    return valides;
 }
