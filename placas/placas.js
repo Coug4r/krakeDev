@@ -6,8 +6,9 @@ validarPlaca=function(){
         mostrarTexto('lblValidez', "PLACA NO VALIDA");
     }else{
         mostrarTexto('lblValidez', "PLACA VALIDA");
-        let tipoVehiculo = opbtenerTipoVehiculo(placa);
+        let tipoVehiculo = obtenerTipoVehiculo(placa);
         let provincia = obtenerProvincia(placa);
+        let picoYPlaca = obtenerDiaPicoYPlaca(placa);
         //Se valida y muetra la provincia.
         if (provincia == null){
             mostrarTexto('lblError0', "Provincia Incorrecta");
@@ -19,6 +20,11 @@ validarPlaca=function(){
             mostrarTexto('lblError1', "Provincia Incorrecta");
         }else{
             mostrarTexto('lblTipo', "Tipo: " + tipoVehiculo);
+        }
+        if (picoYPlaca == null){
+            mostrarTexto('lblError2', "Digitos incorrectos no coincide.");
+        }else{
+            mostrarTexto('lblDiapicoYplaca', "Pico y placa el dia: " + picoYPlaca);
         }
     }
 }

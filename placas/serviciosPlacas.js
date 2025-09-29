@@ -60,7 +60,24 @@ limpiar=function(){
     mostrarTexto("lblError7", "");
     mostrarTexto("lblError8", "");
     mostrarTexto("lblProbincia", "");
+    mostrarTexto("lblDiapicoYplaca", "");
     mostrarTexto("lblTipo", "");
+}
+LIMPIAR=function(){
+    mostrarTexto("lblError0", "");
+    mostrarTexto("lblError1", "");
+    mostrarTexto("lblError2", "");
+    mostrarTexto("lblError3", "");
+    mostrarTexto("lblError4", "");
+    mostrarTexto("lblError5", "");
+    mostrarTexto("lblError6", "");
+    mostrarTexto("lblError7", "");
+    mostrarTexto("lblError8", "");
+    mostrarTexto("lblProbincia", "");
+    mostrarTexto("lblTipo", "");
+    mostrarTexto("lblValidez", "");    
+    mostrarTexto("lblDiapicoYplaca", "");    
+    mostrarTextoEnCaja('txtPlaca', "");
 }
 const provincias = {
   A: "Azuay",
@@ -101,7 +118,7 @@ const tipos = {
     S: "Vehiculo de gobierno provincial",
     M: "Vehiculo municipal",
 }
-opbtenerTipoVehiculo=function(placa){
+obtenerTipoVehiculo=function(placa){
     let segundoCaracter = placa.charAt(1);
     let asciiCode = segundoCaracter.charCodeAt(0);
     let validez;
@@ -109,6 +126,23 @@ opbtenerTipoVehiculo=function(placa){
         return tipos[segundoCaracter] || "Vehiculo particular";
     }else{
         return null;
-    }
-    
+    }   
+}
+const diasPicoYplaca = {
+    1: "Lunes",
+    2: "Lunes",
+    3: "Martes",
+    4: "Martes",
+    5: "Miercoles",
+    6: "Miercoles",
+    7: "Jueves",
+    8: "Jueves",
+    9: "Viernes",
+    0: "Viernes"
+}
+obtenerDiaPicoYPlaca=function(placa){
+    let longitud = placa.length - 1;
+    let ultimoCaracter = placa.charAt(longitud);
+    return diasPicoYplaca[ultimoCaracter] || null
+
 }
