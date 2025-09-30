@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(92, 15, 122);
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.contenido{
+    background-color: rgba(17, 147, 154, 0.562);
+    display: flex;
+    justify-content: center; 
+    align-items: center;       
+    gap: 40px;                 
+    margin: 50px;
+    text-align: center;
+}
+.tit{
+    display: block;
+    color: whitesmoke;
+    background-color:  rgba(8, 133, 187, 0.351);
+    border-radius: 5px; 
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+.seleccion{
+    background-color: rgba(8, 133, 187, 0.351);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: fit-content;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+.PC{
+    background-color: rgba(8, 133, 187, 0.351);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: fit-content;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+.puntos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.puntosJugador{
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(0, 255, 21);
+    font-style: italic;
+    font-size: 40px;
+}
+.puntosPc{
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(0, 8, 255);
+    font-style: italic;
+    font-size: 40px;
+}
+.conBoton{
+    display: flex;
+    justify-content: center;
+}
+.boton{
+    background-color: rgba(8, 187, 80, 0.415);
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+.playWin{
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(60, 255, 0);
+    font-style: italic;
+    font-size: 16px;
+}
