@@ -20,3 +20,23 @@ guardarPalabra=function(){
         alert("LA PALABRA DEBE TENER 5 LETRAS Y TODAS MAYUSCULAS!!")
     }
 }
+const poss = {
+    1:"div0",
+    2:"div1",
+    3:"div2",
+    4:"div3",
+    5:"div4"
+}
+mostrarLetra=function(letra, posicion){
+    mostrarTexto(poss[posicion], letra);
+}
+validar=function(letra){
+    let palabrasEncontradas;
+    for (let posicion=0;posicion<letra.length;posicion++){
+        let caracter = palabraSecreta.charAt(posicion);
+        if(caracter == letra){
+            mostrarLetra(letra, posicion);
+            palabrasEncontradas ++ ;
+        }
+    }
+}
