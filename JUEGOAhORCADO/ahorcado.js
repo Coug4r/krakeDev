@@ -11,3 +11,12 @@ esMayuscula=function(caracter){
     }
     return valides;
 }
+guardarPalabra=function(){
+    let palabra = recuperarTexto("txtSecreta");
+    let largPalabra = palabra.length;
+    if(palabra == 5 && esMayuscula(largPalabra)){
+        palabraSecreta = palabra;
+    }else{
+        alert("LA PALABRA DEBE TENER 5 LETRAS Y TODAS MAYUSCULAS!!")
+    }
+}
