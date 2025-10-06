@@ -54,7 +54,6 @@ validar=function(letra){
     if(palabrasEncontradas == 0){
         errores ++;
         mostrarAhorcado();
-    }else{
         alert("La letra no es parte de la palabra!!")
     }
 }
@@ -67,9 +66,9 @@ ingresarLetra=function(){
         alert("Solo se aceptan MAYUSCULAS!!")
     }
     if(coincidencias==5){
-        alert("HA GANADO!!");
+         mostrarImagen("ahorcadoImagen", "ganador.gif");
     }else if(intentos==10){
-        alert("HA PERDIDO!!")
+        mostrarImagen("ahorcadoImagen", "gameOver.gif");
     }
 }
 const imgs = {
