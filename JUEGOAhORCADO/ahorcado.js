@@ -53,6 +53,9 @@ validar=function(letra){
     }
     if(palabrasEncontradas == 0){
         errores ++;
+        mostrarAhorcado();
+    }else{
+        alert("La letra no es parte de la palabra!!")
     }
 }
 ingresarLetra=function(){
@@ -63,9 +66,24 @@ ingresarLetra=function(){
     }else{
         alert("Solo se aceptan MAYUSCULAS!!")
     }
-    if(coincidencias=5){
+    if(coincidencias==5){
         alert("HA GANADO!!");
-    }else if(intentos=10){
+    }else if(intentos==10){
         alert("HA PERDIDO!!")
     }
+}
+const imgs = {
+    1: "Ahorcado_01.png",
+    2: "Ahorcado_02.png",
+    3: "Ahorcado_03.png",
+    4: "Ahorcado_04.png",
+    5: "Ahorcado_05.png",
+    6: "Ahorcado_06.png",
+    7: "Ahorcado_07.png",
+    8: "Ahorcado_08.png",
+    9: "Ahorcado_09.png",
+}
+mostrarAhorcado=function(){
+    let src = imgs[errores] || "";
+    mostrarImagen('ahorcadoImagen', src);
 }
