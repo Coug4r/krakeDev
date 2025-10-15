@@ -55,3 +55,62 @@ ejecutarNuevo=function(){
     habilitarComponente("btnGuardar")
     esNuevo = true;
 }
+buscarEmpleado=function(cedula){
+    let elementoEmpleados;
+    for(let i=0; i<empleados.length;i++){
+        elementoEmpleados=empleados[i];
+        if(elementoEmpleados.cedula == cedula){
+            return elementoEmpleados;
+        }
+    }
+    return null;
+}
+agregarEmpleado=function(empleado){
+    let cedulaNueva = empleado.cedula
+    if(buscarEmpleado(cedulaNueva) == null){
+        empleados.push(empleado);
+        return true;
+    }else{
+        return false;
+    }
+
+}
+guardar=function(){
+    let valides = true;
+    let valorCedula = recuperarTexto("txtCedula");
+    let valorNombre = recuperarTexto("txtNombre");
+    let valorApellido = recuperarTexto("txtApellido");
+    let valorSueldo = recuperarFloat("txtSueldo");
+    if(esDigito(valorCedula)==false || valorCedula.length != 10){
+        mostrarTexto('lblErrorCedula', "Solo se permiten 10 digitos exactos");
+        valides = false;
+    }
+    if(esMayuscula(valorNombre)==false || valorNombre.length < 3){
+        mostrarTexto('lblErrorNombre', "Solo se permiten mas de 3 mayusculas");
+        valides = false;
+    }
+    if(esMayuscula(valorApellido)==false || valorApellido.length < 3){
+        mostrarTexto('lblErrorApellido', "Solo se permiten mas de 3 mayusculas");
+        valides = false;
+    }
+    if(valorSueldo <= 400 || valorSueldo >= 5000){
+        mostrarTexto('lblErrorSueldo', "Solo se permiten valores entre 400 y 5000");
+        valides = false;
+    }
+    if(valides == true){
+        if(esNuevo == true){
+            let empleado = {};
+            empleado.cedula=valorCedula;
+            empleado.nombre=valorNombre;
+            empleado.apellido=valorApellido;
+            empleado.sueldo=valorSueldo;
+            let resultado = agregarEmpleado(empleado);
+            if(resultado == true){
+                alert("Empleado guardado correctamente!")
+                mostrarEmpleados();
+            }else{
+                alert("Ya existe un empleado con la cedula: "+ valorCedula);
+            }
+        }
+    }
+}
