@@ -9,11 +9,7 @@ mostrarOpcionEmpleado=function(){
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleados();
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-    deshabilitarComponente("btnGuardar");
+    deshabilitarCajas();
 
 }
 mostrarOpcionRol=function(){
@@ -108,6 +104,7 @@ guardar=function(){
             if(resultado == true){
                 alert("Empleado guardado correctamente!")
                 mostrarEmpleados();
+                deshabilitarCajas();
             }else{
                 alert("Ya existe un empleado con la cedula: "+ valorCedula);
             }
