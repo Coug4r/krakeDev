@@ -140,5 +140,16 @@ ejecutarBusqueda=function(){
 limpiar=function(){
     deshabilitarCajas();
     esNuevo = false;
-    
+
+}
+buscarPorRol=function(){
+    let elementoBusqueda = buscarEmpleado(recuperarTexto("txtBusquedaCedulaRol"));
+    if (elementoBusqueda == null){
+        alert("El empleado no existe!");
+    }else{
+        mostrarTexto("infoCedula", elementoBusqueda.cedula);
+        mostrarTexto("infoSueldo", elementoBusqueda.sueldo);
+        mostrarTexto("infoNombre", elementoBusqueda.nombre +" "+elementoBusqueda.apellido);
+    }
+
 }
