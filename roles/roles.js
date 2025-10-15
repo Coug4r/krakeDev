@@ -137,3 +137,8 @@ ejecutarBusqueda=function(){
         deshabilitarComponente("txtCedula");
     }
 }
+limpiar=function(){
+    deshabilitarCajas();
+    esNuevo = false;
+    
+}

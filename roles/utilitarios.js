@@ -56,4 +56,8 @@ deshabilitarCajas=function(){
     deshabilitarComponente("txtApellido");
     deshabilitarComponente("txtSueldo");
     deshabilitarComponente("btnGuardar");
+    mostrarTextoEnCaja('txtCedula', "");
+    mostrarTextoEnCaja('txtNombre', "");
+    mostrarTextoEnCaja('txtApellido', "");
+    mostrarTextoEnCaja('txtSueldo', "");
 }
