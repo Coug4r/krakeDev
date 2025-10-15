@@ -105,9 +105,35 @@ guardar=function(){
                 alert("Empleado guardado correctamente!")
                 mostrarEmpleados();
                 deshabilitarCajas();
+                let esNuevo = false;
             }else{
                 alert("Ya existe un empleado con la cedula: "+ valorCedula);
             }
+        }else{
+        let valorCedulaBusqueda = recuperarTexto("txtBusquedaCedula");
+        let elementoBusqueda = buscarEmpleado(valorCedulaBusqueda);
+        elementoBusqueda.nombre=valorNombre;
+        elementoBusqueda.apellido=valorApellido;
+        elementoBusqueda.saldo=valorSueldo;
+        alert("Empleado Modificado Exitosamente!")
+        mostrarEmpleados();
+        deshabilitarCajas();
         }
+    }
+}
+ejecutarBusqueda=function(){
+    let elementoBusqueda = buscarEmpleado(recuperarTexto("txtBusquedaCedula"));
+    if (elementoBusqueda == null){
+        alert("El empleado no existe!");
+    }else{
+        mostrarTextoEnCaja("txtCedula", elementoBusqueda.cedula);
+        mostrarTextoEnCaja("txtNombre", elementoBusqueda.nombre);
+        mostrarTextoEnCaja("txtApellido", elementoBusqueda.apellido);
+        mostrarTextoEnCaja("txtSueldo", elementoBusqueda.sueldo);
+        habilitarComponente("txtNombre");
+        habilitarComponente("txtApellido");
+        habilitarComponente("txtSueldo");
+        habilitarComponente("btnGuardar");
+        deshabilitarComponente("txtCedula");
     }
 }
